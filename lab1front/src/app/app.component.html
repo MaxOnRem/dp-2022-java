@@ -1,0 +1,11 @@
+<h1>Hi there!</h1>
+
+<a href="./Servlet1">Servlet1</a>
+
+<button (click)="getTables()">Get Table</button>
+
+<ul>
+  <li *ngFor="let tables of tableList">
+    Title: {{ tables.title }}, width: {{ tables.width }}, height: {{ tables.height }}
+  </li>
+</ul>
