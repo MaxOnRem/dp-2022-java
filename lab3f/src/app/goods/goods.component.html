@@ -1,0 +1,35 @@
+<section class="laptops" id="goods">
+	<div class="card-container">
+		<div class="card" *ngFor="let l of LaptopsList">
+			<img src={{l.img}} alt="photo">
+			<h4 (click)="onSelect(l)">{{l.title}}</h4>
+			<!-- <button class="card__button" (click)="ClickButton()">More Details</button> -->
+			<!-- <div class="full-info" *ngIf="!isClicked"> -->
+			<div class="full-info">
+				{{l.description}}
+			</div>
+			<span (click)="deleteLaptop(l)">X</span>
+		</div>
+	</div>
+</section>
+
+<div>
+	<app-form [laptop]="selectedLaptop" (updated)="updateLaptop()"></app-form>
+</div>
+
+
+<section class="add_form">
+	<h3 class="form-title">Add Table Info</h3>
+	<form #form1="ngForm" (ngSubmit)="addLaptop(form1.value)" class="form">
+		<input name="id" type="hidden" class="form-input" ngModel>
+		<label for="title" class="form-label">Title</label>
+		<input name="title" type="text" class="form-input" ngModel>
+		<label for="img" class="form-label">URL for image (assets/...)</label>
+		<input name="img" type="text" class="form-input" ngModel>
+		<label for="description" class="form-label">Width Info</label>
+		<input name="description" type="text" class="form-input" ngModel>
+		<button type="submit" class="form-button">Add Table Info</button>
+	</form>
+<section class="uml-section">
+<img src="../../assets/UML.png" alt="uml">
+</section>

@@ -1,0 +1,17 @@
+<div class="updateform" *ngIf="laptop">
+    <h3 class="form-title">Update table</h3>
+    
+    <form class="form">
+        <input name="id" type="hidden" class="form-input" [(ngModel)]="laptop.id">
+        <label for="title" class="form-label">Title</label>
+        <input name="title" type="text" class="form-input" [(ngModel)]="laptop.title">
+        <label for="img" class="form-label">URL for image (from assets/...)</label>
+        <input name="img" type="text" class="form-input" [(ngModel)]="laptop.img">
+        <label for="description" class="form-label">Width characterictic</label>
+        <input name="description" type="text" class="form-input" [(ngModel)]="laptop.description">
+        <button type="submit" class="form-button" (click)="updateLaptop()">Update Table</button>
+		  <div>
+		  </div>
+    </form>
+    
+</div>
