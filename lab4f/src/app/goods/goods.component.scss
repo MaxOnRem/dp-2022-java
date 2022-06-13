@@ -1,0 +1,116 @@
+@import "/src/styles.scss";
+
+.laptops {
+    text-align: center;
+    background-color: $main-color-2;
+    padding-top: 2rem;
+    .card-container {
+        width: 95%;
+        margin: 2rem auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 2rem;
+        .card {
+            margin: auto;
+            width: 30%;
+            margin: 0 .5rem 2rem .5rem;
+            img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: 2rem;
+                border-radius: 50%;
+            }
+            h2,
+            h4,
+            p {
+                color: $text-color;
+            }
+            h4 {
+                cursor: pointer;
+            }
+            p {
+                margin-top: 1rem;
+            }
+            .card__button {
+                background-color: $main-color;
+                color: $text-color;
+                padding: 14px 28px;
+                margin: 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+            .full-info {
+                width: 70%;
+                margin: 1rem auto 2rem auto;
+                color: $text-color;
+            }
+            span {
+                color: $text-color;
+                background-color: $main-color;
+                padding: 12px;
+                border-radius: 30%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.add_form {
+    padding: 2rem 0;
+    background-color: lighten($main-color-2, 15%);
+
+    .form-title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .form-label {
+            font-size: 24px;
+            margin: 1rem;
+        }
+        .form-input {
+            padding: 12px;
+            width: 40%;
+        }
+        .form-message {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+        .form-button {
+            background-color: $main-color;
+            color: $text-color;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .card-container {
+        width: 50%;
+        flex-wrap: wrap;
+        margin: auto;
+        .card {
+            padding-bottom: 1.5rem;
+        }
+        .full-info {
+            padding-bottom: 2rem;
+        }
+    }   
+}
